@@ -24,3 +24,25 @@ Content-Type: application/json
 
 ### Delete Data
 DELETE  http://localhost:4004/odata/v4/student-api/StudentSet('a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5')
+### Reading data from Authors Table
+GET http://localhost:4004/odata/v4/student-api/Authors
+### Creating record in Authors Table
+POST http://localhost:4004/odata/v4/student-api/Authors
+Content-Type: application/json
+
+{
+      "name": "Ganesh Narute",
+      "books": [
+            {
+              "name": "SAP Learn",
+              "title": "BTP CAPM",
+              "publishedDate": "10-10-2020"
+            },
+              {
+              "name": "SAP Learn2",
+              "title": "BTP CAPM2",
+              "publishedDate":  "11-11-2020"
+            }
+            ]
+      
+}

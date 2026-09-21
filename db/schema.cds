@@ -15,6 +15,7 @@ entity Students:cuid,managed,customAspect {
         mobile    : String;
         age       : Integer;
         gender    : String;
+       
 }
 
 entity Courses : cuid, managed {
@@ -30,4 +31,18 @@ entity Address  {
         city: String;
         country: String;
         pincode: Integer;
+}
+
+entity Books: cuid{
+
+    name :String;
+    title: String;
+    publishedDate: String;
+    author:Association to Authors;//managed association
+}
+
+entity Authors: cuid{
+
+    name :String;
+    books: Composition of many Books on books.author=$self;
 }
